@@ -19,11 +19,11 @@ public class CepTest {
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
         driver.findElement(By.name("endereco")).sendKeys("04366000");
 
-        Thread.sleep(2000);
-        driver.findElement(By.xpath("//*[@id=\"btn_pesquisar\"]")).click();
+//        Thread.sleep(2000);
+        //driver.findElement(By.xpath("//*[@id=\"btn_pesquisar\"]")).click();
         //Thread.sleep(2000);
-        String texto = driver.findElement(By.xpath("//*[@id=\"resultado-DNEC\"]/tbody/tr/td[1]")).getText();
-        Assert.assertEquals("Texto Invalido","Avenida Cupecê - até 3670 - lado par", texto);
+//        String texto = driver.findElement(By.xpath("//*[@id=\"resultado-DNEC\"]/tbody/tr/td[1]")).getText();
+//        Assert.assertEquals("Texto Invalido","Avenida Cupecê - até 3670 - lado par", texto);
 
         //Thread.sleep(2000);
         Select select = new Select(driver.findElement(By.id("tipoCEP")));
@@ -34,9 +34,6 @@ public class CepTest {
 
 
 
-//        driver.findElement(By.xpath("//*[@id=\"gsr\"]")).click();
-//        String texto = driver.findElement(By.xpath("//*[@id=\"kp-wp-tab-overview\"]/div[2]/div/div/div[1]/div/a/div/div")).getText();
-//        Assert.assertEquals("Texto Invalido", "Iron Man", "Iron Man");
 
 
     }
